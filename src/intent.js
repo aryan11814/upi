@@ -92,7 +92,7 @@ const PaymentUI = () => {
         </div>
       </div>
 
-      <div className="button-section">
+     <div className="button-section">
       {selectedButton === null
         ? buttons.map((button, index) => (
             <button
