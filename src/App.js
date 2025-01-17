@@ -3,8 +3,7 @@ import PaymentUI from './intent';
 function App() {
   return (
     <div>
-    <PaymentUI/>
-    </div>
+    <PaymentUI/>    </div>
   );
 }
 

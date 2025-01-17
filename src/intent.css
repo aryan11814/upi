@@ -2,20 +2,39 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../src/assets/tp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -1;
 }
 
 .container {
   max-width: 600px;
   margin: 20px auto;
-  background: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
+  padding: 20px;
+ 
 }
 
 .header {
-  background-color: #4caf50;
-  color: white;
+  color: #00796b;
   text-align: center;
   padding: 15px;
   font-size: 2rem;
@@ -23,20 +42,24 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.timer-section, .amount-section, .video-section {
+.timer-section,
+.amount-section,
+.video-section {
   padding: 20px;
   text-align: center;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #bdbdbd;
 }
 
-.timer-label, .amount-label, .video-instruction {
-  color: #333;
+.timer-label,
+.amount-label,
+.video-instruction {
+  color: #37474f;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
 .timer-value {
-  color: #d32f2f;
+  color: #e53935;
   font-size: 1.8rem;
   font-weight: bold;
   margin-top: 5px;
@@ -44,45 +67,47 @@ body {
 
 .amount-value {
   font-weight: bold;
-  color: #4caf50;
+  color: #43a047;
   margin-left: 5px;
 }
 
 .button-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   padding: 20px;
 }
 
-.button {
-  background-color: #ffffff;
-  color: #333;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+.button-section .button {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #37474f;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
   text-align: center;
   padding: 15px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
-
 .button:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: #4caf50;
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  color: #00796b;
 }
 
 .button svg {
   margin-bottom: 8px;
 }
+
+
 
 .video-section {
   text-align: center;
@@ -90,19 +115,19 @@ body {
 }
 
 .video-instruction {
-  color: #555;
+  color: #546e7a;
   font-size: 1rem;
   margin-bottom: 10px;
 }
 
 .language-options {
-  color: #4caf50;
+  color: #1e88e5;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 .language-options:hover {
-  color: #0056b3;
+  color: #1565c0;
 }
 
 .logos-section {
@@ -110,7 +135,7 @@ body {
   justify-content: center;
   gap: 10px;
   padding: 20px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #bdbdbd;
 }
 
 .logo-button {
@@ -137,7 +162,9 @@ body {
     padding: 10px;
   }
 
-  .timer-label, .amount-label, .video-instruction {
+  .timer-label,
+  .amount-label,
+  .video-instruction {
     font-size: 1.2rem;
   }
 
