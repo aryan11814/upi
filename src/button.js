@@ -121,7 +121,7 @@ const UpiIntent = () => {
             borderRadius: "12px",
             textAlign: "center",
             padding: "15px",
-            fontSize: "1rem",
+            fontSize: "2rem",
             fontWeight: "bold",
             cursor: "pointer",
             transition: "all 0.3s ease",
@@ -132,8 +132,8 @@ const UpiIntent = () => {
             backdropFilter: "blur(12px)",
             WebkitBackdropFilter: "blur(12px)"
           }}
-        >
-          <p style={{ marginBottom: "20px", fontWeight: "bold" }}>
+        ><p className="amount-value">₹5000</p>
+          <p style={{display: "flex", alignItems: "center", gap: "10px" }}>
             {buttons[selectedButton]?.content}
           </p>
           <button onClick={closeModal} className="button1">
